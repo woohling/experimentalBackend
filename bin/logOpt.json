@@ -1,0 +1,4 @@
+{
+  "levels": ["error", "warn", "verbose", "info", "debug", "silly"],
+  "devices": ["web", "pc", "ios", "android", "server", "graphic"]
+}
