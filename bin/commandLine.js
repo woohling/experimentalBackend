@@ -74,7 +74,6 @@ function splitMsg(msg) {
     for (let prop in formatted) {
         formattedMsg += color(prop, formatted[prop]);
     }
-    console.log(formattedMsg);
 }
 
 function color(prop, value) {
