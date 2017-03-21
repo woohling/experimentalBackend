@@ -49,7 +49,6 @@ socket.on('notification', data => {
 socket.emit('notification', {type: 'registerLog', data: logOpt});
 
 function splitMsg(msg) {
-    console.log(msg);
     if (!msg || (typeof msg !== 'string')) return;
     let msgs = msg.split(" ");
     let formatted = {};
@@ -74,6 +73,7 @@ function splitMsg(msg) {
     for (let prop in formatted) {
         formattedMsg += color(prop, formatted[prop]);
     }
+    console.log(formattedMsg);
 }
 
 function color(prop, value) {
@@ -86,7 +86,7 @@ function color(prop, value) {
             return `${chalk.white.bgRed(value)} `;
         }
     } else if (prop == 'api') {
-        return `${chalk.white.bgBlue(value)} `;
+        return `${chalk.black.bgCyan(value)} `;
     } else if (prop == 'client') {
         return `${chalk.dim.bgYellow(value)} `;
     } else {
